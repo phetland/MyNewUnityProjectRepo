@@ -8,7 +8,8 @@ public class ScoreManager : MonoBehaviour
 {
     public static bool gameOver;
     public static bool won;
-    public static int score; 
+    public static int score;
+    public static bool outOfBounds;
 
     public Text textbox;
 
@@ -30,10 +31,11 @@ public class ScoreManager : MonoBehaviour
 
 
         //win condition: 3 or more points
-        if (score >= 3)
+        if (score >= 5)
         {
             won = true;
             gameOver = true;
+            outOfBounds = false;
         }
 
         if (gameOver)
@@ -42,13 +44,21 @@ public class ScoreManager : MonoBehaviour
             {
                 textbox.text = "You win!\nPress R to Try Again!";
             }
-            else
+            else 
             {
-                textbox.text = "You lose!\nPress R to Try Again!";
+                textbox.text = "Out of bounds! You lose!\nPress R to Try Again!";
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
+            if (gameOver)
+            {
+                if (outOfBounds)
+                {
+                    textbox.text = "Out of bounds! You lose!\nPress R to Try Again!";
+                }
             }
 
         }
