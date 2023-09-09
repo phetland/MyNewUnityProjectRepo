@@ -6,19 +6,17 @@ using UnityEngine;
 // Prototype 1
 // Prototype 1 Truck
 // The code contains variables and loops to run the game
-
-//attach this script to the player
-public class LoseOnFall : MonoBehaviour
+public class Assignment : MonoBehaviour
 {
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-   
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -1)
-        {
-            ScoreManager.gameOver = true; 
-        }
         
     }
 }

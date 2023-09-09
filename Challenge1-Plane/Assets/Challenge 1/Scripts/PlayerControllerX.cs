@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Patrick Hetland
+//Challenge 1
+//Challenge 1 Plane
+//The code has variables and loops to control the game
+
+
 public class PlayerControllerX : MonoBehaviour
 {
     public float speed;
