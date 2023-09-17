@@ -27,6 +27,8 @@ public class SpawnManagerX : MonoBehaviour
 
         // instantiate ball at random spawn location
         Instantiate(ballPrefabs[0], spawnPos, ballPrefabs[0].transform.rotation);
+        Instantiate(ballPrefabs[1], spawnPos, ballPrefabs[1].transform.rotation);
+        Instantiate(ballPrefabs[2],spawnPos, ballPrefabs[2].transform.rotation);
     }
 
 }
