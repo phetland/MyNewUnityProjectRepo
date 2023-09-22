@@ -22,26 +22,21 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 20;
     private object healthSystem;
 
-    public HealthSystem;
-    void Start()
-    {
+    public HealthSystem
+    
         //get a reference to the health system script
-        healthSystem = GameObject.FindGameObjectsWithTag("HealthSystem")
-            .GetComponent<healthSystem>();
+        
+
         //InvokeRepeating("SpawnRandomPrefab", 2, 1.5f);
 
-        StartCoroutine(SpawnRandomPrefabWithCoroutine());
+        
 
-
-
-    }
-
-    IEnumerator SpawnRandomPrefabWithCoroutine()
+    
     {
         //add a 3 second delay before first spawning objects
         yield return new WaitForSeconds(3f);
 
-        while (!healthSystem.gameOver)
+        
         while (true)
         {
             SpawnRandomPrefab();
