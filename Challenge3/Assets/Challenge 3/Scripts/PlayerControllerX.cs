@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControllerX : MonoBehaviour
 {
+    private Rigidbody rb;
     public bool gameOver;
 
     public float floatForce;
@@ -21,6 +22,7 @@ public class PlayerControllerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         playerAudio = GetComponent<AudioSource>();
 
