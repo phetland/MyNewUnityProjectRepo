@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class GemBehaviour : MonoBehaviour
 {
+	public PointManager pointManager;
+
 	[Header("References")]
 	public GameObject gemVisuals;
 	public GameObject collectedParticleSystem;
@@ -29,6 +32,7 @@ public class GemBehaviour : MonoBehaviour
 		gemCollider2D.enabled = false;
 		gemVisuals.SetActive (false);
 		collectedParticleSystem.SetActive (true);
+		pointManager.score += 1;
 		Invoke ("DeactivateGemGameObject", durationOfCollectedParticleSystem);
 
 	}

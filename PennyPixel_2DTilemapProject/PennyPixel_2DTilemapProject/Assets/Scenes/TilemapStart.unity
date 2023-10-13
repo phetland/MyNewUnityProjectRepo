@@ -204,6 +204,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &42904589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42904590}
+  - component: {fileID: 42904591}
+  m_Layer: 0
+  m_Name: PointManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &42904590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42904589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1532160791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42904591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42904589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8257a7ff5e84e974a9b4ff71961bcc2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &50989108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
@@ -273,6 +318,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 0}
+--- !u!114 &92428184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50989108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195ab0b920df71e40bd6f02bba0810d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &92428185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50989108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a2dd6832e2f464290469455d78feaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointManager: {fileID: 170887912}
+  gemVisuals: {fileID: 170887907}
+  collectedParticleSystem: {fileID: 170887907}
+  gemCollider2D: {fileID: 0}
+--- !u!114 &92428186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50989108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4586e80351adccd4fb460c804125b91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyscoreText: {fileID: 0}
 --- !u!1 &170887907
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +370,8 @@ GameObject:
   - component: {fileID: 170887908}
   - component: {fileID: 170887910}
   - component: {fileID: 170887909}
-  - component: {fileID: 170887911}
+  - component: {fileID: 170887912}
+  - component: {fileID: 170887913}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -411,7 +498,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170887907}
   m_CullTransparentMesh: 1
---- !u!114 &170887911
+--- !u!114 &170887912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420,10 +507,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 170887907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4bea854bf48bcd438ddda2bd0c7bf8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8257a7ff5e84e974a9b4ff71961bcc2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
+  score: 0
+--- !u!114 &170887913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170887907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a2dd6832e2f464290469455d78feaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointManager: {fileID: 42904591}
+  gemVisuals: {fileID: 0}
+  collectedParticleSystem: {fileID: 0}
+  gemCollider2D: {fileID: 0}
 --- !u!1001 &221633658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,6 +579,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -545,6 +653,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -670,6 +783,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -739,6 +857,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1002,6 +1125,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 92428183}
+    - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 92428185}
+    - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 92428184}
+    - targetCorrespondingSourceObject: {fileID: 1208144871472054, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 92428186}
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
 --- !u!1 &588711350
 GameObject:
@@ -1195,6 +1330,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1559,6 +1699,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1751,6 +1896,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1820,6 +1970,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1921,6 +2076,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2162,6 +2322,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2219,6 +2384,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2414,6 +2584,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3929,6 +4104,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4370,6 +4550,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4525,6 +4710,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1248309470}
+  - {fileID: 42904590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1532160792
@@ -4724,6 +4910,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4793,6 +4984,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4850,6 +5046,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5027,7 +5228,7 @@ GameObject:
   - component: {fileID: 1873802790}
   - component: {fileID: 1873802792}
   - component: {fileID: 1873802791}
-  - component: {fileID: 1873802793}
+  - component: {fileID: 1873802794}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -5153,7 +5354,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873802789}
   m_CullTransparentMesh: 1
---- !u!114 &1873802793
+--- !u!114 &1873802794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5162,10 +5363,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873802789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4bea854bf48bcd438ddda2bd0c7bf8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8257a7ff5e84e974a9b4ff71961bcc2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textbox: {fileID: 0}
+  score: 0
 --- !u!1 &1893017361 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1764816090862790, guid: 75cabef8c622f42229b80fec978c6a10,
@@ -5385,6 +5586,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5454,6 +5660,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5595,6 +5806,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114504696268370078, guid: 75cabef8c622f42229b80fec978c6a10,
+        type: 3}
+      propertyPath: pointManager
+      value: 
+      objectReference: {fileID: 42904591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
